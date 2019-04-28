@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .faded {
+            animation : fade 1500ms ease;
+            animation-fill-mode : forwards; 
+            /* transition: transform 1.5s ease-out , opacity 1.5s ease-out; */
+        }
+        @keyframes fade{
+            0% {opacity:1;}
+            100%{opacity:0;}
+        }
+        #pic {
+            margin : 20px auto;
+            background-image: url('./thanos_snap.png');
+            height: 80px;
+            width: 80px;
+        }
+        .paragraph {
+            padding : 20px  20px;
+            margin: 0 auto;
+            text-align:center;
+        }
+        .thanos-snap{
+            background-image: url('./thanos_snap.png');
+            animation: snap 1s steps(1,end);
+            -webkit-animation: snap 1s steps(1,end);
+        }
+        .thanos-reverse{
+            background-image: url('./thanos_time.png');
+            animation: revers 1s steps(1,end);
+            -webkit-animation: revers 1s steps(1,end);
+        }
+        @keyframes revers{
+            0% {background-position: 0px 0;background-image: url('./thanos_time.png');}
+            4.2%{background-position: -160px 0;background-image: url('./thanos_time.png');}
+            8.4%{background-position: -320px 0;background-image: url('./thanos_time.png');}
+            12.6%{background-position: -480px 0;background-image: url('./thanos_time.png');}
+            16.8%{background-position: -640px 0;background-image: url('./thanos_time.png');}
+            21.0%{background-position: -800px 0;background-image: url('./thanos_time.png');}
+            25.2%{background-position: -960px 0;background-image: url('./thanos_time.png');}
+            29.4%{background-position: -1120px 0;background-image: url('./thanos_time.png');}
+            33.6%{background-position: -1280px 0;background-image: url('./thanos_time.png');}
+            37.8%{background-position: -1440px 0;background-image: url('./thanos_time.png');}
+            42.0%{background-position: -1600px 0;background-image: url('./thanos_time.png');}
+            46.2%{background-position: -1760px 0;background-image: url('./thanos_time.png');}
+            50.4%{background-position: -1920px 0;background-image: url('./thanos_time.png');}
+            54.6%{background-position: -2080px 0;background-image: url('./thanos_time.png');}
+            58.8%{background-position: -2240px 0;background-image: url('./thanos_time.png');}
+            63.0%{background-position: -2400px 0;background-image: url('./thanos_time.png');}
+            67.2%{background-position: -2560px 0;background-image: url('./thanos_time.png');}
+            71.4%{background-position: -2720px 0;background-image: url('./thanos_time.png');}
+            75.6%{background-position: -2880px 0;background-image: url('./thanos_time.png');}
+            79.8%{background-position: -3040px 0;background-image: url('./thanos_time.png');}
+            84.0%{background-position: -3200px 0;background-image: url('./thanos_time.png');}
+            88.2%{background-position: -3360px 0;background-image: url('./thanos_time.png');}
+            92.4%{background-position: -3520px 0;background-image: url('./thanos_time.png');}
+            96.6%{background-position: -3680px 0;background-image: url('./thanos_time.png');}
+            99.9%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
+            100.0%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
+        }
+        @keyframes snap{
+            0% {background-position: 0px 0;background-image: url('./thanos_snap.png');}
+            4.2%{background-position: -160px 0;background-image: url('./thanos_snap.png');}
+            8.4%{background-position: -320px 0;background-image: url('./thanos_snap.png');}
+            12.6%{background-position: -480px 0;background-image: url('./thanos_snap.png');}
+            16.8%{background-position: -640px 0;background-image: url('./thanos_snap.png');}
+            21.0%{background-position: -800px 0;background-image: url('./thanos_snap.png');}
+            25.2%{background-position: -960px 0;background-image: url('./thanos_snap.png');}
+            29.4%{background-position: -1120px 0;background-image: url('./thanos_snap.png');}
+            33.6%{background-position: -1280px 0;background-image: url('./thanos_snap.png');}
+            37.8%{background-position: -1440px 0;background-image: url('./thanos_snap.png');}
+            42.0%{background-position: -1600px 0;background-image: url('./thanos_snap.png');}
+            46.2%{background-position: -1760px 0;background-image: url('./thanos_snap.png');}
+            50.4%{background-position: -1920px 0;background-image: url('./thanos_snap.png');}
+            54.6%{background-position: -2080px 0;background-image: url('./thanos_snap.png');}
+            58.8%{background-position: -2240px 0;background-image: url('./thanos_snap.png');}
+            63.0%{background-position: -2400px 0;background-image: url('./thanos_snap.png');}
+            67.2%{background-position: -2560px 0;background-image: url('./thanos_snap.png');}
+            71.4%{background-position: -2720px 0;background-image: url('./thanos_snap.png');}
+            75.6%{background-position: -2880px 0;background-image: url('./thanos_snap.png');}
+            79.8%{background-position: -3040px 0;background-image: url('./thanos_snap.png');}
+            84.0%{background-position: -3200px 0;background-image: url('./thanos_snap.png');}
+            88.2%{background-position: -3360px 0;background-image: url('./thanos_snap.png');}
+            92.4%{background-position: -3520px 0;background-image: url('./thanos_snap.png');}
+            96.6%{background-position: -3680px 0;background-image: url('./thanos_snap.png');}
+            99.9%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
+            100.0%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
+        } 
+    </style>
+    
+</head>
+<body>
+    <div id = "pic" test = "aaa" onclick="cli()" ontouchstart = "cli()" data-status = "false" ></div>
+    <div id = "paragraph1" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph2" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph3" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph4" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph5" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph6" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph7" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph8" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph9" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph10" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph11" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph12" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph13" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph14" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <div id = "paragraph15" class = "paragraph"> <p>Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。</p></div>
+    <audio id = "snap" src = "./snap.mp3"></audio>
+    <audio id = "reverse" src = "./reverse.mp3"></audio>
+    <script src= "http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src = "https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+    <script type = "text/javascript">
+            function cli(){
+                var pic = document.getElementById('pic');
+                var venish =  function() {
+                            var i = 0
+                            var id
+                            var timer = setInterval(function(){
+                                    id = "paragraph" + (i+1)
+                                    html2canvas(document.querySelector('#' + id)).then( (canvas )=>{
+                                        canvas.setAttribute('id','canvas');
+                                        canvas.style.textAlign = "center"
+                                        var paragraph = document.getElementById(id);
+                                        document.body.insertBefore(canvas,paragraph);
+                                        document.body.removeChild(paragraph);
+                                        //$(canvas).css('transition', 'transform ' + this.DEFAULT_DURATION + 's ease-out, opacity ' + this.DEFAULT_DURATION + 's ease-out');
+                                        canvas.setAttribute('class','faded')
+                                        var ctx = canvas.getContext('2d');
+                                        ctx.getImageData(0,0,canvas.width,canvas.height);
+                                    //ctx.
+                                    })
+                                    i+=2
+                                    if(i > 6)
+                                        clearInterval(timer)
+                                }, 2000)
+                }
+                var theEye = function(){
+                        var canvas = document.getElementById('canvas');
+                        var paragraph1 = document.createElement('div')
+                        paragraph1.id = "paragraph1"
+                        paragraph1.className = "paragraph"
+                        var p = document.createElement('p')
+                        p.innerHTML = 'Thunk 函数早在上个世纪 60 年代就诞生了。那时，编程语言刚刚起步，计算机学家还在研究，编译器怎么写比较好。一个争论的焦点是"求值策略"，即函数的参数到底应该何时求值。'
+                        paragraph1.appendChild(p)
+                        document.body.insertBefore(paragraph1,canvas)
+                        document.body.removeChild(canvas)
+                }
+                if(pic.dataset.status == 'false'){
+                    venish()
+                    document.getElementById('snap').play();
+                    pic.className = 'thanos-snap';
+                    pic.dataset.status = 'true'
+                }else{
+                    theEye()
+                    document.getElementById('reverse').play();
+                    pic.className = 'thanos-reverse';
+                    pic.dataset.status ='false'
+                }
+            }
+            
+    </script>
+</body>
+</html>

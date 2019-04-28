@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .img{
+            width : 100px;
+            height : 100px;
+        }
+        .faded {
+            animation : fade 1500ms ease;
+            animation-fill-mode : forwards;
+        }
+        @keyframes fade{
+            0% {opacity:1;}
+            100%{opacity:0;}
+        }
+        #pic {
+            margin : 20px auto;
+            background-image: url('./thanos_snap.png');
+            height: 80px;
+            width: 80px;
+        }
+        .paragraph {
+            position : relative;
+            height : 150px;
+            margin-top : 2rem;
+            margin-bottom : 2rem;
+        }
+        .paragraph img{
+            position: absolute;
+            left : 0;
+            width : 120px;
+            height : 120px;
+            margin-left : 20px;
+        }
+        .paragraph p{
+            position: absolute;
+            right : 0;
+            font-family: 'KaiTi';
+            font-size : 1rem;
+            vertical-align: center;
+            line-height: 2rem;
+            text-align : left;
+            width : 80%;
+            padding : 10px;
+            margin: 0 auto;
+        }
+        .paragraph:after{
+            content:'';
+            clear:both;
+        }
+        .thanos-snap{
+            background-image: url('./thanos_snap.png');
+            animation: snap 1s steps(1,end);
+            -webkit-animation: snap 1s steps(1,end);
+        }
+        .thanos-reverse{
+            background-image: url('./thanos_time.png');
+            animation: revers 1s steps(1,end);
+            -webkit-animation: revers 1s steps(1,end);
+        }
+        @keyframes revers{
+            0% {background-position: 0px 0;background-image: url('./thanos_time.png');}
+            4.2%{background-position: -160px 0;background-image: url('./thanos_time.png');}
+            8.4%{background-position: -320px 0;background-image: url('./thanos_time.png');}
+            12.6%{background-position: -480px 0;background-image: url('./thanos_time.png');}
+            16.8%{background-position: -640px 0;background-image: url('./thanos_time.png');}
+            21.0%{background-position: -800px 0;background-image: url('./thanos_time.png');}
+            25.2%{background-position: -960px 0;background-image: url('./thanos_time.png');}
+            29.4%{background-position: -1120px 0;background-image: url('./thanos_time.png');}
+            33.6%{background-position: -1280px 0;background-image: url('./thanos_time.png');}
+            37.8%{background-position: -1440px 0;background-image: url('./thanos_time.png');}
+            42.0%{background-position: -1600px 0;background-image: url('./thanos_time.png');}
+            46.2%{background-position: -1760px 0;background-image: url('./thanos_time.png');}
+            50.4%{background-position: -1920px 0;background-image: url('./thanos_time.png');}
+            54.6%{background-position: -2080px 0;background-image: url('./thanos_time.png');}
+            58.8%{background-position: -2240px 0;background-image: url('./thanos_time.png');}
+            63.0%{background-position: -2400px 0;background-image: url('./thanos_time.png');}
+            67.2%{background-position: -2560px 0;background-image: url('./thanos_time.png');}
+            71.4%{background-position: -2720px 0;background-image: url('./thanos_time.png');}
+            75.6%{background-position: -2880px 0;background-image: url('./thanos_time.png');}
+            79.8%{background-position: -3040px 0;background-image: url('./thanos_time.png');}
+            84.0%{background-position: -3200px 0;background-image: url('./thanos_time.png');}
+            88.2%{background-position: -3360px 0;background-image: url('./thanos_time.png');}
+            92.4%{background-position: -3520px 0;background-image: url('./thanos_time.png');}
+            96.6%{background-position: -3680px 0;background-image: url('./thanos_time.png');}
+            99.9%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
+            100.0%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
+        }
+        @keyframes snap{
+            0% {background-position: 0px 0;background-image: url('./thanos_snap.png');}
+            4.2%{background-position: -160px 0;background-image: url('./thanos_snap.png');}
+            8.4%{background-position: -320px 0;background-image: url('./thanos_snap.png');}
+            12.6%{background-position: -480px 0;background-image: url('./thanos_snap.png');}
+            16.8%{background-position: -640px 0;background-image: url('./thanos_snap.png');}
+            21.0%{background-position: -800px 0;background-image: url('./thanos_snap.png');}
+            25.2%{background-position: -960px 0;background-image: url('./thanos_snap.png');}
+            29.4%{background-position: -1120px 0;background-image: url('./thanos_snap.png');}
+            33.6%{background-position: -1280px 0;background-image: url('./thanos_snap.png');}
+            37.8%{background-position: -1440px 0;background-image: url('./thanos_snap.png');}
+            42.0%{background-position: -1600px 0;background-image: url('./thanos_snap.png');}
+            46.2%{background-position: -1760px 0;background-image: url('./thanos_snap.png');}
+            50.4%{background-position: -1920px 0;background-image: url('./thanos_snap.png');}
+            54.6%{background-position: -2080px 0;background-image: url('./thanos_snap.png');}
+            58.8%{background-position: -2240px 0;background-image: url('./thanos_snap.png');}
+            63.0%{background-position: -2400px 0;background-image: url('./thanos_snap.png');}
+            67.2%{background-position: -2560px 0;background-image: url('./thanos_snap.png');}
+            71.4%{background-position: -2720px 0;background-image: url('./thanos_snap.png');}
+            75.6%{background-position: -2880px 0;background-image: url('./thanos_snap.png');}
+            79.8%{background-position: -3040px 0;background-image: url('./thanos_snap.png');}
+            84.0%{background-position: -3200px 0;background-image: url('./thanos_snap.png');}
+            88.2%{background-position: -3360px 0;background-image: url('./thanos_snap.png');}
+            92.4%{background-position: -3520px 0;background-image: url('./thanos_snap.png');}
+            96.6%{background-position: -3680px 0;background-image: url('./thanos_snap.png');}
+            99.9%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
+            100.0%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
+        } 
+    </style>
+    
+</head>
+<body>
+    <div id = "pic" test = "aaa" onclick="cli(event)" ontouchstart = "cli()" data-status = "false" ></div>
+    <div id = "container">
+        <div id = "captain" class = "paragraph captain">  <img class = "img" src = './img/captain.jpg'></img> <p>作为复仇者联盟的精神领袖， 他的各项身体机能已经达到了人类身体所能达到的极限，加以出色的格斗技巧和运用自如的振金盾牌，实力自然是没得说，虽然厉害，但毕竟还是人类。(感觉拿着复联3中的新盾，美队的实力变弱了，新盾牌也不能扔，扔出去就回不来了.....)</p></div>
+        <div id = "falcon" class = "paragraph falcon"> <img class = "img" src = './img/falcon.jpg'></img> <p>作为一个退伍伞兵，他的实力自然不如身为特工的黑寡妇和鹰眼，但是作为空中远程单位，黑寡妇就有点尴尬了。</p></div>
+        <div id = "hawkeye" class = "paragraph hawkeye">  <img class = "img" src = './img/hawkeye.jpg'></img><p>一流的神箭手，在战场上总是显得非常的自信，并且配备精良的武器装备，作为一个普通人在每次战斗中都发挥了重要的作用。</p></div>
+        <div id = "red" class = "paragraph red"> <img class = "img" src = './img/red.jpg'></img> <p>虽然按理说她应该不如幻视的，但是从内战和复联3中可以看出来她可以压制幻视，实力在电影中有目共睹，并且它的精神控制能力，可以从内心击垮敌人。</p> </div>
+        <div id = "antman" class = "paragraph antman"> <img class = "img" src = './img/antman.jpg'></img> <p>蚁人的能力很奇妙，可以根据不同的敌人和场景而变大缩小，复联3之前的钢铁侠，肯定是被蚁人克制的不要不要的，一言不合就让你短路。</p></div>
+        <div id = "blackpanther" class = "paragraph blackpanther"> <img class = "img" src = './img/blackpanther.jpg'></img> <p>其实黑豹的实力并不强，虽然心型草强化了他的敏捷度和反应力，但是跟美队和冬兵是没法比的，但是人家土豪到拥有一副金刚不坏的振金战衣，那美队也就拿他没办法了。</p></div>
+        <div id = "green" class = "paragraph green">  <img class = "img" src = './img/anothertrash.jpg'></img> <p>越愤怒越强大的设定确实逆天，力量和抗击打能力相当强悍，在被灭霸一套组合拳打趴下之前，还以为他永远都不会受伤。</p></div>
+        <div id = "sherlock" class = "paragraph sherlock">  <img class = "img" src = './img/sherlock.jpg'></img> <p>作为一个魔法师，他的能力很难与其他人作比较，但是他的实力绝对不弱于上面的成员，不同于幻视 他这颗时间原石可以说是用的淋漓尽致，甚至利用时间困住了比灭霸还强的多玛姆，并且时间原石可以让他看到未来改变未来。 </p></div>
+        <div id = "tony" class = "paragraph tony"> <img class = "img" src = './img/tony.jpg'></img> <p>同样是有钱人和黑豹相比钢铁侠在电影中一直低调不下来，各种狂拽酷炫，各种新技术黑科技，可以说托尼最厉害的不是战甲，而是他脑子里的知识，在复联3中竟然强悍到利用纳米机器人不断的修复装甲，连灭霸都说他是被知识诅咒的人，也就是说他的知识水平甚至和灭霸差不多。</p></div>
+        <div id = "spiderman" class = "paragraph spiderman"> <img class = "img" src = './img/spiderman.jpg'> <p>这可能是被严重低估的一个超级英雄，他的力量与美队相差不大，甚至要更强，蜘蛛感应更是一个神技能，一直作为平民英雄的皮特帕克，作战能力还不是很强，所以在内战中第一次参加战斗被美队撂倒了，《蜘蛛侠》中破解后的战衣也是很强大的，复联3中的全新战衣更是令他实力增加不少。</p> </div>
+        <div id = "vision" class = "paragraph vision">  <img class = "img" src = './img/trash.jpg'></img> <p>单看头上的一颗无限原石，其实力肯定是在众凡人之上的，但是总感觉一副好牌被他打烂了，心灵宝石完全可以让他兼容绯红女巫的能力（因为绯红女巫也是心灵宝石的产物）但是在复联3种全程挂机被女人保护的状态.... 可能是因为他只有两岁吧! 哎 个人感觉死的最虐心的除了洛基就是幻视了。</p> </div>
+        <div id = "machine" class = "paragraph machine">  <img class = "img" src = './img/war-machine.jpg'></img><p>罗德上校是美国陆军武器开发部的部长，虽然身穿出自托尼·斯塔克之手的钢铁战衣，但是装甲的先进程度、作战能力和头脑都远不如托尼，但是作为远程空中单位，真打起来像冬兵这样的还是比较吃亏的。</p></div>
+        <div id = "widow" class = "paragraph widow"> <img class = "img" src = './img/widow.jpg'></img><p>娜塔莎·罗曼诺夫身为一名特工虽然没有什么超能力，但她凭借矫捷的身手和机智多谋的头脑依然足够成为一名超级英雄。</p></div>
+        <div id = "winter" class = "paragraph winter">  <img class = "img" src = './img/winter-soldier.jpg'></img> <p>他拥有和美队相当的能力设定，在《美队2》中可以看出被洗脑的他实力稍逊于美队，但相差不多，在内战中恢复意识的他可能因为出于愧疚而全程不在状态，但是在复联3得到振金手臂后实力必然是强化不少。</p></div>
+        <div id = "thor" class = "paragraph thor"> <img class = "img" src = './img/thor.jpg'></img> <p>雷神排第一我想是没有什么争议了吧，毕竟他是复联中唯一的神，而且是奥丁之子，在复联3中曾经承受了一颗中子星（那颗垂死的恒星）的所有能量而没有死，而且拿到新武器后可以重伤灭霸，其他人是完全做不到的。</p> </div>
+    </div>
+    <audio id = "snap" src = "./snap.mp3"></audio>
+    <audio id = "reverse" src = "./reverse.mp3"></audio>
+    <audio id = "dust1" src = "./thanos_dust_1.mp3"></audio>
+    <audio id = "dust2" src = "./thanos_dust_2.mp3"></audio>
+    <audio id = "dust3" src = "./thanos_dust_3.mp3"></audio>
+    <audio id = "dust4" src = "./thanos_dust_4.mp3"></audio>
+    <audio id = "dust5" src = "./thanos_dust_5.mp3"></audio>
+    <audio id = "dust6" src = "./thanos_dust_6.mp3"></audio>
+    <script src= "http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src = "https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+    <script src = "./thanos.js" ></script>
+    <script type = "text/javascript">
+            function cli(e) {
+                var pic = e.target
+                if(pic.dataset.status == 'false'){
+                    document.getElementById('snap').play();
+                    pic.className = 'thanos-snap';
+                    pic.dataset.status = 'true'
+                    setTimeout(function(){
+                        thanos.startAnimation()
+                    },1100)
+                }else{
+                    setTimeout(function(){
+                        thanos.eyeOfAgamotto()
+                    },1100)
+                    document.getElementById('reverse').play();
+                    pic.className = 'thanos-reverse';
+                    pic.dataset.status ='false';
+                }
+                
+            }
+            thanos.init();
+    </script>
+</body>
+</html>
