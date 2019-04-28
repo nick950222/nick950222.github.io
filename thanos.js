@@ -158,8 +158,6 @@
                 })
             })
         }
-
-
     }
-    window.thanos = new snapFinger()
+    window.snapFinger = snapFinger
 })(window,jQuery);
