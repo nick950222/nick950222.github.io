@@ -25,25 +25,46 @@
             width: 80px;
         }
         .paragraph {
-            position : relative;
             height : 10rem;
-            margin-top : 2rem;
-            margin-bottom : 2rem;
+            margin-top : 3rem;
+            margin-bottom : 3rem;
+        }
+        @media screen and (min-width:1280px) {
+            .paragraph{
+                height : 18rem;
+                margin-top : 5rem;
+                margin-bottom : 5rem;
+            }
         }
         .paragraph img{
-            position: absolute;
-            left : 0;
+            float : left;
             width : 6rem;
             height :  6rem;
             margin-left : 1rem;
         }
-        @media screen and (min-width:960px) and (max-width:1800px){
+        @media screen and (min-width:640px) and (max-width:960px){
             .paragraph img{
-                position: absolute;
-                left : 0;
+                float : left;
                 width : 8rem;
                 height :  8rem;
                 margin-left : 1rem;
+            }
+        }
+        @media screen and (min-width:960px) and (max-width:1280px){
+            .paragraph img{
+                float : left;
+                width : 10em;
+                height :  10rem;
+                margin-left : 1rem;
+            }
+        }
+        @media screen and (min-width:1280px) {
+            .paragraph img{
+                float : left;
+                width : 12rem;
+                height :  12rem;
+                margin-left : 1rem;
+                margin-bottom : 2rem;
             }
         }
         .paragraph p{
@@ -51,8 +72,7 @@
             margin-block-end : 0;
 
             padding-left : 0 0 0 2rem;
-            position: absolute;
-            right : 0;
+            float : right;
             font-family: 'KaiTi';
             font-size : 0.5rem;
             vertical-align: center;
@@ -62,20 +82,51 @@
             /* padding : 1rem;
             margin: 0 auto; */
         }
-        @media screen and (min-width:960px) and (max-width:1800px){
+        @media screen and (min-width:640px) and (max-width:960px){
             .paragraph p{
                 margin-block-start : 0;
                 margin-block-end : 0;
-
                 padding-left : 0 0 0 2rem;
-                position: absolute;
-                right : 0;
+                float : right;
                 font-family: 'KaiTi';
                 font-size : 1.2rem;
                 vertical-align: center;
                 line-height: 2rem;
                 text-align : left;
                 width : 75%;
+                /* padding : 1rem;
+                margin: 0 auto; */
+            }
+        }
+        @media screen and (min-width:960px) and (max-width:1280px){
+            .paragraph p{
+                margin-block-start : 0;
+                margin-block-end : 0;
+                margin-right : 1rem;
+                padding-left : 0 0 0 2rem;
+                float : right;
+                font-family: 'KaiTi';
+                font-size : 1.5rem;
+                vertical-align: center;
+                line-height: 2rem;
+                text-align : left;
+                width : 77%;
+                /* padding : 1rem;
+                margin: 0 auto; */
+            }
+        }
+        @media screen and (min-width:1280px){
+            .paragraph p{
+                margin-block-start : 0;
+                margin-block-end : 0;
+                padding-left : 0 0 0 2rem;
+                float : right;
+                font-family: 'KaiTi';
+                font-size : 1.2rem;
+                vertical-align: center;
+                line-height: 2rem;
+                text-align : left;
+                width : 85%;
                 /* padding : 1rem;
                 margin: 0 auto; */
             }
@@ -185,7 +236,7 @@
     <script src = "./thanos.js" ></script>
     <script type = "text/javascript">
             function cli(e) {
-                var pic = e.target
+                var pic = document.getElementById('pic')
                 if(pic.dataset.status == 'false'){
                     document.getElementById('snap').play();
                     pic.className = 'thanos-snap';

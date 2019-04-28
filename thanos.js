@@ -52,7 +52,6 @@
                 x ,
                 y;
             for(let key of self.keys){
-                console.log(key)
                 if(self.dead.has(key)){
                     continue
                 }else{
@@ -100,7 +99,6 @@
                     try {
                         var originImageData = context.getImageData(0, 0, width, height);
                     } catch (e) { 
-                        console.log(e)
                         return;
                     }  // 这里是因为getImageData函数在width和height为0或者前面的坐标超出范围时会报错
                     /// 下面就是实现湮灭的基本代码
@@ -122,7 +120,6 @@
                     for (var i = 0; self.maxCanvas > i; ++i) {
                         imgDataList.push(context.createImageData(width, height));
                     }
-                    console.log(imgDataList)
                     for (var w = 0; w < width; ++w)
                         for (var h = 0; h < height; ++h)
                             for (var l = 0; 2 > l; ++l) {
