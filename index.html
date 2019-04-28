@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = "preload" href = "./thanos_snap.png" as = "image" type = "image/png" crossorigin> </link>
+    <!-- <link rel = "preload" href = "https://www.google.com/logos/fnbx/thanos/thanos_snap.png" as = "image" type = "image/png" crossorigin> </link>
     <link rel = "preload" href = "./snap.mp3" as = "media" type = "audio/mpeg" crossorigin> </link>
     <link rel = "preload" href = "./reverse.mp3" as = "media" type = "audio/mpeg" crossorigin></link>
     <link rel = "preload" href = "./thanos_dust_1.mp3" as = "media" type = "audio/mpeg" crossorigin></link>
@@ -13,7 +13,7 @@
     <link rel = "preload" href = "./thanos_dust_4.mp3" as = "media" type = "audio/mpeg" crossorigin></link>
     <link rel = "preload" href = "./thanos_dust_5.mp3" as = "media" type = "audio/mpeg" crossorigin></link>
     <link rel = "preload" href = "./thanos_dust_6.mp3" as = "media" type = "audio/mpeg" crossorigin></link>
-    <link rel = "preload" href = "./thanos_time.png" as = "image"  type = "image/png" crossorigin> </link>
+    <link rel = "preload" href = "https://www.google.com/logos/fnbx/thanos/thanos_time.png" as = "image"  type = "image/png" crossorigin> </link> -->
     <title>Document</title>
     <style>
         /* .img{
@@ -30,7 +30,7 @@
         }
         #pic {
             margin : 1rem auto;
-            background-image: url('./thanos_snap.png');
+            background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_snap.png');
             height: 80px;
             width: 80px;
         }
@@ -146,70 +146,72 @@
             clear:both;
         }
         .thanos-snap{
-            background-image: url('./thanos_snap.png');
+            background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_snap.png');
             animation: snap 1s steps(1,end);
+            animation-fill-mode : forwards;
             -webkit-animation: snap 1s steps(1,end);
         }
         .thanos-reverse{
-            background-image: url('./thanos_time.png');
+            background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_reverse.png');
             animation: revers 1s steps(1,end);
+            animation-fill-mode : forwards;
             -webkit-animation: revers 1s steps(1,end);
         }
         @keyframes revers{
-            0% {background-position: 0px 0;background-image: url('./thanos_time.png');}
-            4.2%{background-position: -160px 0;background-image: url('./thanos_time.png');}
-            8.4%{background-position: -320px 0;background-image: url('./thanos_time.png');}
-            12.6%{background-position: -480px 0;background-image: url('./thanos_time.png');}
-            16.8%{background-position: -640px 0;background-image: url('./thanos_time.png');}
-            21.0%{background-position: -800px 0;background-image: url('./thanos_time.png');}
-            25.2%{background-position: -960px 0;background-image: url('./thanos_time.png');}
-            29.4%{background-position: -1120px 0;background-image: url('./thanos_time.png');}
-            33.6%{background-position: -1280px 0;background-image: url('./thanos_time.png');}
-            37.8%{background-position: -1440px 0;background-image: url('./thanos_time.png');}
-            42.0%{background-position: -1600px 0;background-image: url('./thanos_time.png');}
-            46.2%{background-position: -1760px 0;background-image: url('./thanos_time.png');}
-            50.4%{background-position: -1920px 0;background-image: url('./thanos_time.png');}
-            54.6%{background-position: -2080px 0;background-image: url('./thanos_time.png');}
-            58.8%{background-position: -2240px 0;background-image: url('./thanos_time.png');}
-            63.0%{background-position: -2400px 0;background-image: url('./thanos_time.png');}
-            67.2%{background-position: -2560px 0;background-image: url('./thanos_time.png');}
-            71.4%{background-position: -2720px 0;background-image: url('./thanos_time.png');}
-            75.6%{background-position: -2880px 0;background-image: url('./thanos_time.png');}
-            79.8%{background-position: -3040px 0;background-image: url('./thanos_time.png');}
-            84.0%{background-position: -3200px 0;background-image: url('./thanos_time.png');}
-            88.2%{background-position: -3360px 0;background-image: url('./thanos_time.png');}
-            92.4%{background-position: -3520px 0;background-image: url('./thanos_time.png');}
-            96.6%{background-position: -3680px 0;background-image: url('./thanos_time.png');}
-            99.9%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
-            100.0%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
+            0% {background-position: 0px 0;}
+            4.2%{background-position: -160px 0;}
+            8.4%{background-position: -320px 0;}
+            12.6%{background-position: -480px 0;}
+            16.8%{background-position: -640px 0;}
+            21.0%{background-position: -800px 0;}
+            25.2%{background-position: -960px 0;}
+            29.4%{background-position: -1120px 0;}
+            33.6%{background-position: -1280px 0;}
+            37.8%{background-position: -1440px 0;}
+            42.0%{background-position: -1600px 0;}
+            46.2%{background-position: -1760px 0;}
+            50.4%{background-position: -1920px 0;}
+            54.6%{background-position: -2080px 0;}
+            58.8%{background-position: -2240px 0;}
+            63.0%{background-position: -2400px 0;}
+            67.2%{background-position: -2560px 0;}
+            71.4%{background-position: -2720px 0;}
+            75.6%{background-position: -2880px 0;}
+            79.8%{background-position: -3040px 0;}
+            84.0%{background-position: -3200px 0;}
+            88.2%{background-position: -3360px 0;}
+            92.4%{background-position: -3520px 0;}
+            96.6%{background-position: -3680px 0;}
+            99.9%{background-position: -3840px 0;}
+            100.0%{background-position: -3840px 0;background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_snap.png');}
         }
         @keyframes snap{
-            0% {background-position: 0px 0;background-image: url('./thanos_snap.png');}
-            4.2%{background-position: -160px 0;background-image: url('./thanos_snap.png');}
-            8.4%{background-position: -320px 0;background-image: url('./thanos_snap.png');}
-            12.6%{background-position: -480px 0;background-image: url('./thanos_snap.png');}
-            16.8%{background-position: -640px 0;background-image: url('./thanos_snap.png');}
-            21.0%{background-position: -800px 0;background-image: url('./thanos_snap.png');}
-            25.2%{background-position: -960px 0;background-image: url('./thanos_snap.png');}
-            29.4%{background-position: -1120px 0;background-image: url('./thanos_snap.png');}
-            33.6%{background-position: -1280px 0;background-image: url('./thanos_snap.png');}
-            37.8%{background-position: -1440px 0;background-image: url('./thanos_snap.png');}
-            42.0%{background-position: -1600px 0;background-image: url('./thanos_snap.png');}
-            46.2%{background-position: -1760px 0;background-image: url('./thanos_snap.png');}
-            50.4%{background-position: -1920px 0;background-image: url('./thanos_snap.png');}
-            54.6%{background-position: -2080px 0;background-image: url('./thanos_snap.png');}
-            58.8%{background-position: -2240px 0;background-image: url('./thanos_snap.png');}
-            63.0%{background-position: -2400px 0;background-image: url('./thanos_snap.png');}
-            67.2%{background-position: -2560px 0;background-image: url('./thanos_snap.png');}
-            71.4%{background-position: -2720px 0;background-image: url('./thanos_snap.png');}
-            75.6%{background-position: -2880px 0;background-image: url('./thanos_snap.png');}
-            79.8%{background-position: -3040px 0;background-image: url('./thanos_snap.png');}
-            84.0%{background-position: -3200px 0;background-image: url('./thanos_snap.png');}
-            88.2%{background-position: -3360px 0;background-image: url('./thanos_snap.png');}
-            92.4%{background-position: -3520px 0;background-image: url('./thanos_snap.png');}
-            96.6%{background-position: -3680px 0;background-image: url('./thanos_snap.png');}
-            99.9%{background-position: -3840px 0;background-image: url('./thanos_snap.png');}
-            100.0%{background-position: -3840px 0;background-image: url('./thanos_time.png');}
+            0% {background-position: 0px 0;}
+            4.2%{background-position: -160px 0;}
+            8.4%{background-position: -320px 0;}
+            12.6%{background-position: -480px 0;}
+            16.8%{background-position: -640px 0;}
+            21.0%{background-position: -800px 0;}
+            25.2%{background-position: -960px 0;}
+            29.4%{background-position: -1120px 0;}
+            33.6%{background-position: -1280px 0;}
+            37.8%{background-position: -1440px 0;}
+            42.0%{background-position: -1600px 0;}
+            46.2%{background-position: -1760px 0;}
+            50.4%{background-position: -1920px 0;}
+            54.6%{background-position: -2080px 0;}
+            58.8%{background-position: -2240px 0;}
+            63.0%{background-position: -2400px 0;}
+            67.2%{background-position: -2560px 0;}
+            71.4%{background-position: -2720px 0;}
+            75.6%{background-position: -2880px 0;}
+            79.8%{background-position: -3040px 0;}
+            84.0%{background-position: -3200px 0;}
+            88.2%{background-position: -3360px 0;}
+            92.4%{background-position: -3520px 0;}
+            96.6%{background-position: -3680px 0;}
+            99.9%{background-position: -3840px 0;}
+            100.0%{background-position: -3840px 0;background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_reverse.png');}
         } 
     </style>
     
@@ -233,14 +235,14 @@
         <div id = "winter" class = "paragraph winter">  <img class = "img" src = './img/winter-soldier.jpg'></img> <p>他拥有和美队相当的能力设定，在《美队2》中可以看出被洗脑的他实力稍逊于美队，但相差不多，在内战中恢复意识的他可能因为出于愧疚而全程不在状态，但是在复联3得到振金手臂后实力必然是强化不少。</p></div>
         <div id = "thor" class = "paragraph thor"> <img class = "img" src = './img/thor.jpg'></img> <p>雷神排第一我想是没有什么争议了吧，毕竟他是复联中唯一的神，而且是奥丁之子，在复联3中曾经承受了一颗中子星（那颗垂死的恒星）的所有能量而没有死，而且拿到新武器后可以重伤灭霸，其他人是完全做不到的。</p> </div>
     </div>
-    <audio id = "snap" src = "./snap.mp3"></audio>
-    <audio id = "reverse" src = "./reverse.mp3"></audio>
-    <audio id = "dust1" src = "./thanos_dust_1.mp3"></audio>
-    <audio id = "dust2" src = "./thanos_dust_2.mp3"></audio>
-    <audio id = "dust3" src = "./thanos_dust_3.mp3"></audio>
-    <audio id = "dust4" src = "./thanos_dust_4.mp3"></audio>
-    <audio id = "dust5" src = "./thanos_dust_5.mp3"></audio>
-    <audio id = "dust6" src = "./thanos_dust_6.mp3"></audio>
+    <audio id = "snap" src = "https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3"></audio>
+    <audio id = "reverse" src = "https://www.google.com/logos/fnbx/thanos/thanos_reverse_sound.mp3"></audio>
+    <audio id = "dust1" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_1.mp3"></audio>
+    <audio id = "dust2" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_2.mp3"></audio>
+    <audio id = "dust3" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_3.mp3"></audio>
+    <audio id = "dust4" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_4.mp3"></audio>
+    <audio id = "dust5" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_5.mp3"></audio>
+    <audio id = "dust6" src = "https://www.google.com/logos/fnbx/thanos/thanos_dust_6.mp3"></audio>
     <script src= "./html2canvas.min.js"></script>
     <script src = "./jquery-3.4.0.min.js" ></script>
     <script src = "./thanos.js" ></script>
