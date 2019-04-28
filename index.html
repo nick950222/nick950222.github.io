@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .img{
+        /* .img{
             width : 8rem;
             height : 8rem;
-        }
+        } */
         .faded {
             animation : fade 1500ms ease;
             animation-fill-mode : forwards;
@@ -21,8 +21,8 @@
         #pic {
             margin : 1rem auto;
             background-image: url('./thanos_snap.png');
-            height: 4rem;
-            width: 4rem;
+            height: 80px;
+            width: 80px;
         }
         .paragraph {
             position : relative;
@@ -33,11 +33,24 @@
         .paragraph img{
             position: absolute;
             left : 0;
-            width : 8rem;
-            height : 8rem;
+            width : 6rem;
+            height :  6rem;
             margin-left : 1rem;
         }
+        @media screen and (min-width:960px) and (max-width:1800px){
+            .paragraph img{
+                position: absolute;
+                left : 0;
+                width : 8rem;
+                height :  8rem;
+                margin-left : 1rem;
+            }
+        }
         .paragraph p{
+            margin-block-start : 0;
+            margin-block-end : 0;
+
+            padding-left : 0 0 0 2rem;
             position: absolute;
             right : 0;
             font-family: 'KaiTi';
@@ -46,8 +59,26 @@
             line-height: 1.5rem;
             text-align : left;
             width : 60%;
-            padding : 1rem;
-            margin: 0 auto;
+            /* padding : 1rem;
+            margin: 0 auto; */
+        }
+        @media screen and (min-width:960px) and (max-width:1800px){
+            .paragraph p{
+                margin-block-start : 0;
+                margin-block-end : 0;
+
+                padding-left : 0 0 0 2rem;
+                position: absolute;
+                right : 0;
+                font-family: 'KaiTi';
+                font-size : 1.2rem;
+                vertical-align: center;
+                line-height: 2rem;
+                text-align : left;
+                width : 75%;
+                /* padding : 1rem;
+                margin: 0 auto; */
+            }
         }
         .paragraph:after{
             content:'';
@@ -133,9 +164,9 @@
         <div id = "blackpanther" class = "paragraph blackpanther"> <img class = "img" src = './img/blackpather.jpg'></img> <p>其实黑豹的实力并不强，虽然心型草强化了他的敏捷度和反应力，但是跟美队和冬兵是没法比的，但是人家土豪到拥有一副金刚不坏的振金战衣，那美队也就拿他没办法了。</p></div>
         <div id = "green" class = "paragraph green">  <img class = "img" src = './img/anothertrash.jpg'></img> <p>越愤怒越强大的设定确实逆天，力量和抗击打能力相当强悍，在被灭霸一套组合拳打趴下之前，还以为他永远都不会受伤。</p></div>
         <div id = "sherlock" class = "paragraph sherlock">  <img class = "img" src = './img/sherlock.jpg'></img> <p>作为一个魔法师，他的能力很难与其他人作比较，但是他的实力绝对不弱于上面的成员，不同于幻视 他这颗时间原石可以说是用的淋漓尽致，甚至利用时间困住了比灭霸还强的多玛姆，并且时间原石可以让他看到未来改变未来。 </p></div>
-        <div id = "tony" class = "paragraph tony"> <img class = "img" src = './img/tony.jpg'></img> <p>同样是有钱人和黑豹相比钢铁侠在电影中一直低调不下来，各种狂拽酷炫，各种新技术黑科技，可以说托尼最厉害的不是战甲，而是他脑子里的知识，在复联3中竟然强悍到利用纳米机器人不断的修复装甲，连灭霸都说他是被知识诅咒的人，也就是说他的知识水平甚至和灭霸差不多。</p></div>
-        <div id = "spiderman" class = "paragraph spiderman"> <img class = "img" src = './img/spiderman.jpg'> <p>这可能是被严重低估的一个超级英雄，他的力量与美队相差不大，甚至要更强，蜘蛛感应更是一个神技能，一直作为平民英雄的皮特帕克，作战能力还不是很强，所以在内战中第一次参加战斗被美队撂倒了，《蜘蛛侠》中破解后的战衣也是很强大的，复联3中的全新战衣更是令他实力增加不少。</p> </div>
-        <div id = "vision" class = "paragraph vision">  <img class = "img" src = './img/trash.jpg'></img> <p>单看头上的一颗无限原石，其实力肯定是在众凡人之上的，但是总感觉一副好牌被他打烂了，心灵宝石完全可以让他兼容绯红女巫的能力（因为绯红女巫也是心灵宝石的产物）但是在复联3种全程挂机被女人保护的状态.... 可能是因为他只有两岁吧! 哎 个人感觉死的最虐心的除了洛基就是幻视了。</p> </div>
+        <div id = "tony" class = "paragraph tony"> <img class = "img" src = './img/tony.jpg'></img> <p>可以说托尼最厉害的不是战甲，而是他脑子里的知识，在复联3中竟然强悍到利用纳米机器人不断的修复装甲，连灭霸都说他是被知识诅咒的人，也就是说他的知识水平甚至和灭霸差不多。</p></div>
+        <div id = "spiderman" class = "paragraph spiderman"> <img class = "img" src = './img/spiderman.jpg'> <p>这可能是被严重低估的一个超级英雄，他的力量与美队相差不大,蜘蛛感应更是一个神技能,《蜘蛛侠》中破解后的战衣也是很强大的，复联3中的全新战衣更是令他实力增加不少。</p> </div>
+        <div id = "vision" class = "paragraph vision">  <img class = "img" src = './img/trash.jpg'></img> <p>单看头上的一颗无限原石，其实力肯定是在众凡人之上的，但是总感觉一副好牌被他打烂了，心灵宝石完全可以让他兼容绯红女巫的能力,但是在复联3种全程挂机被女人保护的状态.... </p> </div>
         <div id = "machine" class = "paragraph machine">  <img class = "img" src = './img/war-machine.jpg'></img><p>罗德上校是美国陆军武器开发部的部长，虽然身穿出自托尼·斯塔克之手的钢铁战衣，但是装甲的先进程度、作战能力和头脑都远不如托尼，但是作为远程空中单位，真打起来像冬兵这样的还是比较吃亏的。</p></div>
         <div id = "widow" class = "paragraph widow"> <img class = "img" src = './img/widow.jpg'></img><p>娜塔莎·罗曼诺夫身为一名特工虽然没有什么超能力，但她凭借矫捷的身手和机智多谋的头脑依然足够成为一名超级英雄。</p></div>
         <div id = "winter" class = "paragraph winter">  <img class = "img" src = './img/winter-soldier.jpg'></img> <p>他拥有和美队相当的能力设定，在《美队2》中可以看出被洗脑的他实力稍逊于美队，但相差不多，在内战中恢复意识的他可能因为出于愧疚而全程不在状态，但是在复联3得到振金手臂后实力必然是强化不少。</p></div>
