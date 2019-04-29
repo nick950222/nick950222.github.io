@@ -180,7 +180,7 @@
     transform: rotate(-25deg);
     pointer-events: none;
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:640px){
     .stick {
         visibility: hidden;
         position: absolute;
