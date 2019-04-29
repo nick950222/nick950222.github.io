@@ -35,7 +35,6 @@ class Sound {
   
   
   document.addEventListener('mousemove', cursor);
-  document.addEventListener('touchmove', cursor);
   var stick = document.querySelector('.stick');
   var glow1 = document.querySelector('.stick .glow-1');
   var glow2 = document.querySelector('.stick .glow-2');
@@ -52,7 +51,7 @@ class Sound {
       showGlow();
       setTimeout(hideGlow, 300);
     })
-    note.addEventListener('mouseleave', hideGlow);
+    //note.addEventListener('mouseleave', hideGlow);
     note.addEventListener('touchend', hideGlow);
   })
   
