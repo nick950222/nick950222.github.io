@@ -1,8 +1,8 @@
 .container {
     margin: 0 auto;
     height: 100%;
-    width: 588px;
-    min-width: 588px;
+    width: 36.8rem;
+    min-width: 36.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,28 +16,28 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: 52px;
+    top: 3.3rem;
 }
 .container .top-row .note-group.group-of-two {
-    width: 60px;
+    width: 3.8rem;
 }
 .container .top-row .note-group.group-of-three {
-    width: 93px;
+    width: 5.8rem;
 }
 .container .top-row .note-group.group-1 {
-    margin-left: 17px;
+    margin-left: 1.1rem;
 }
 .container .top-row .note-group.group-2 {
-    margin-left: 36px;
+    margin-left: 2.3rem;
 }
 .container .top-row .note-group.group-3 {
-    margin-left: 42px;
+    margin-left: 2.6rem;
 }
 .container .top-row .note-group.group-4 {
-    margin-left: 39px;
+    margin-left: 2.4rem;
 }
 .container .top-row .note-group.group-5 {
-    margin-left: 38px;
+    margin-left: 2.4rem;
 }
 .container .top-row .note {
     margin-top: auto;
@@ -53,23 +53,23 @@
     align-items: flex-end;
 }
 .note {
-    width: 27px;
+    width: 1.7rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
     color: #333333;
     text-align: center;
-    perspective: 200px;
+    perspective: 12.5rem;
     user-select: none;
 }
 .note > div {
     background-image: linear-gradient(-180deg, #E9D5D0 0%, #E6E5F2 98%);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
-    border-radius: 3px;
+    box-shadow: 0.0rem 2px 2px 0px rgba(0, 0, 0, 0.26);
+    border-radius: 0.2rem;
     width: 100%;
     height: 100%;
-    padding: 8px 0;
+    padding: 0.5rem 0;
     box-sizing: border-box;
     transform-origin: top center;
 }
@@ -78,120 +78,120 @@
     transform: rotateX(-5deg);
 }
 .note.note-1 {
-    height: 183px;
+    height: 11.4rem;
 }
 .note.note-2 {
-    height: 178px;
+    height: 11.1rem;
 }
 .note.note-3 {
-    height: 168px;
+    height: 10.5rem;
 }
 .note.note-4 {
-    height: 163px;
+    height: 10.2rem;
 }
 .note.note-5 {
-    height: 153px;
+    height: 9.6rem;
 }
 .note.note-6 {
-    height: 148px;
+    height: 9.3rem;
 }
 .note.note-7 {
-    height: 143px;
+    height: 8.9rem;
 }
 .note.note-8 {
-    height: 133px;
+    height: 8.3rem;
 }
 .note.note-9 {
-    height: 128px;
+    height: 8.0rem;
 }
 .note.note-10 {
-    height: 118px;
+    height: 7.4rem;
 }
 .note.note-11 {
-    height: 113px;
+    height: 7.1rem;
 }
 .note.note-12 {
-    height: 108px;
+    height: 6.8rem;
 }
 .note.note-13 {
-    height: 183px;
+    height: 11.4rem;
 }
 .note.note-14 {
-    height: 178px;
+    height: 11.1rem;
 }
 .note.note-15 {
-    height: 173px;
+    height: 10.8rem;
 }
 .note.note-16 {
-    height: 168px;
+    height: 10.5rem;
 }
 .note.note-17 {
-    height: 163px;
+    height: 10.2rem;
 }
 .note.note-18 {
-    height: 158px;
+    height: 9.9rem;
 }
 .note.note-19 {
-    height: 153px;
+    height: 9.6rem;
 }
 .note.note-20 {
-    height: 148px;
+    height: 9.3rem;
 }
 .note.note-21 {
-    height: 143px;
+    height: 8.9rem;
 }
 .note.note-22 {
-    height: 138px;
+    height: 8.6rem;
 }
 .note.note-23 {
-    height: 133px;
+    height: 8.3rem;
 }
 .note.note-24 {
-    height: 128px;
+    height: 8.0rem;
 }
 .note.note-25 {
-    height: 123px;
+    height: 7.7rem;
 }
 .note.note-26 {
-    height: 118px;
+    height: 7.4rem;
 }
 .note.note-27 {
-    height: 113px;
+    height: 7.1rem;
 }
 .note.note-28 {
-    height: 108px;
+    height: 6.8rem;
 }
 .note.note-29 {
-    height: 103px;
+    height: 6.4rem;
 }
 .note.note-30 {
-    height: 98px;
+    height: 6.1rem;
 }
 .stick {
     position: absolute;
-    height: 117px;
-    width: 22px;
-    left: 100px;
+    height: 7.3rem;
+    width: 1.4rem;
+    left: 6.3rem;
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/stick.svg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 9999;
-    transform-origin: 4px 50%;
+    transform-origin: 0.3rem 50%;
     transform: rotate(-25deg);
     pointer-events: none;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:62.5rem){
     .stick {
         visibility: hidden;
         position: absolute;
-        height: 117px;
-        width: 22px;
-        left: 100px;
+        height: 7.3rem;
+        width: 1.4rem;
+        left: 6.3rem;
         background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/stick.svg);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 9999;
-        transform-origin: 4px 50%;
+        transform-origin: 0.3rem 50%;
         transform: rotate(-25deg);
         pointer-events: none;
     }
@@ -213,18 +213,18 @@
     opacity: 0;
 }
 .stick .glow-1 {
-    width: 34px;
-    height: 34px;
-    left: -6px;
-    top: -6px;
+    width: 2.1rem;
+    height: 2.1rem;
+    left: -0.4rem;
+    top: -0.4rem;
     z-index: 9997;
     animation-duration: 0.3s;
 }
 .stick .glow-2 {
-    width: 28px;
-    height: 28px;
-    left: -3px;
-    top: -37px;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: -0.2rem;
+    top: -2.3rem;
     z-index: 9998;
     animation-duration: 0.2s;
     animation-delay: .1s;
