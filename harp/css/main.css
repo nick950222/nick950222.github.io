@@ -181,7 +181,7 @@
     pointer-events: none;
 }
 @media screen and (max-width:480px){
-    stick {
+    .stick {
         visibility: hidden;
         position: absolute;
         height: 117px;
