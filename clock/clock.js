@@ -11,9 +11,9 @@ var numbers  = document.getElementsByClassName('g-number')
             let hours = date.getHours();
             let minutes= date.getMinutes();
             let seconds = date.getSeconds();
-            hours = hours > 10 ? hours:('0' + hours);
-            minutes = minutes > 10 ? minutes:('0' + minutes);
-            seconds = seconds > 10 ? seconds:('0' + seconds);
+            hours = hours > 9 ? hours:('0' + hours);
+            minutes = minutes > 9 ? minutes: ('0' + minutes);
+            seconds = seconds > 9 ? seconds: ('0' + seconds);
             var time = '' + hours + minutes + seconds;
             Array.prototype.slice.call(numbers).forEach((element,i) => {
                 element.setAttribute('data-digit',parseInt(time.charAt(i)))
@@ -36,7 +36,7 @@ var numbers  = document.getElementsByClassName('g-number')
       if(document.documentElement.dataset.animation === type) return;
       var newStyle = null
       var animationStyle = document.getElementById('animation')
-      var style = document.createElement('style')
+      var oldStyle = animationStyle.childNodes[0]
       if(type === '3d'){
         newStyle = document.createTextNode(`@-webkit-keyframes rotateReverse {
           0% {
@@ -90,58 +90,25 @@ var numbers  = document.getElementsByClassName('g-number')
         
       } else {
         newStyle = document.createTextNode(`
-            @-webkit-keyframes rotateReverse {
-              0% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-              100% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-            }
-            @keyframes rotateReverse {
-              0% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-              100% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-            }
-            @-webkit-keyframes rotate {
-              0% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-              100% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-            }
-            @keyframes rotate {
-              0% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-              100% {
-                -webkit-transform: unset;
-                        transform: unset;
-              }
-            }
-            .g-number-container {
+        
+          .g-number-container {
                 margin-top:10%;
-            }
+          }
           .g-number-rotate {
             -webkit-box-reflect: below -1.5vw linear-gradient(to top, rgba(255,255,255,0.5), rgba(255,255,255,0));
-          }      
+          } 
+          g-number-container {
+            -webkit-animation: none;
+            animation: none;
+          }
+          
+          .g-number-rotate {
+            -webkit-animation: none;
+            animation: none;
+          }     
+          .
         `)
       }
       document.documentElement.setAttribute('data-animation',type)
-      style.appendChild(newStyle)
-      document.getElementsByTagName('head')[0].removeChild(animationStyle)
-      window.requestAnimationFrame(()=>{
-        document.getElementsByTagName('head')[0].appendChild(animationStyle)
-      })
+      animationStyle.replaceChild(newStyle,oldStyle)
     }
