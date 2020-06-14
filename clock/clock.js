@@ -139,5 +139,6 @@ var numbers  = document.getElementsByClassName('g-number')
         `)
       }
       document.documentElement.setAttribute('data-animation',type)
-      animationStyle.replaceChild(newStyle,oldStyle);
+      animationStyle.removeChild(oldStyle);
+      animationStyle.appendChild(newStyle);
     }
