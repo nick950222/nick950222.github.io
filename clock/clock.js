@@ -91,12 +91,44 @@ var numbers  = document.getElementsByClassName('g-number')
       } else {
         newStyle = document.createTextNode(`
             @-webkit-keyframes rotateReverse {
+              0% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
+              100% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
             }
             @keyframes rotateReverse {
+              0% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
+              100% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
             }
             @-webkit-keyframes rotate {
+              0% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
+              100% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
             }
             @keyframes rotate {
+              0% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
+              100% {
+                -webkit-transform: unset;
+                        transform: unset;
+              }
             }
             .g-number-container {
                 margin-top:10%;
