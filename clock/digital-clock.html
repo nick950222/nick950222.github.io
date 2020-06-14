@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-animation="3d">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="heart.png"/>
+    <title> Yifan's digital clock </title>
+    <script type="text/javascript" src="./clock.js" defer></script>
+    <style>
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.preserve {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 100vw;
+          perspective: 100vw;
+}
+
+.g-number-container {
+  margin-top: 17%;
+  text-align: center;
+  -webkit-animation: rotateReverse 10s infinite linear;
+  animation: rotateReverse 10s infinite linear;
+}
+
+.g-number-rotate {
+  -webkit-animation: rotate 10s infinite linear ;
+  animation: rotate 10s infinite linear ;
+}
+
+.g-colon {
+  display: inline-block;
+}
+
+.g-number {
+  position: relative;
+  width: 3vw;
+  height: 12vw;
+  display: inline-block;
+  margin: 3vw 3vw 0 0;
+}
+.g-number .g-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3vw;
+  height: 0.15vw;
+  border-radius: 5vw;
+  background-color: #181919;
+}
+.g-number .g-line:nth-child(1) {
+  -webkit-transform: translateY(-0.2vw);
+          transform: translateY(-0.2vw);
+}
+.g-number .g-line:nth-child(2) {
+  top: 3.2vw;
+}
+.g-number .g-line:nth-child(3) {
+  top: 6.6vw;
+}
+.g-number .g-line:nth-child(4) {
+  -webkit-transform: rotate(90deg) translateY(0.2vw);
+          transform: rotate(90deg) translateY(0.2vw);
+  -webkit-transform-origin: 0 center;
+          transform-origin: 0 center;
+}
+.g-number .g-line:nth-child(5) {
+  -webkit-transform: rotate(-90deg) translateY(0.2vw);
+          transform: rotate(-90deg) translateY(0.2vw);
+  -webkit-transform-origin: 100% center;
+          transform-origin: 100% center;
+}
+.g-number .g-line:nth-child(6) {
+  top: 3.4vw;
+  -webkit-transform: rotate(90deg) translateY(0.2vw);
+          transform: rotate(90deg) translateY(0.2vw);
+  -webkit-transform-origin: 0 center;
+          transform-origin: 0 center;
+}
+.g-number .g-line:nth-child(7) {
+  top: 3.4vw;
+  -webkit-transform: rotate(-90deg) translateY(0.2vw);
+          transform: rotate(-90deg) translateY(0.2vw);
+  -webkit-transform-origin: 100% center;
+          transform-origin: 100% center;
+}
+
+.g-line::before, .g-line::after {
+  will-change: transform;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #34eabc;
+  border-radius: 5vw;
+  box-shadow: 0 0 1vw #0bfdfd, inset 0 0 0.125vmin #0bfdfd;
+  height: 0.25vw;
+}
+.g-line::before {
+  left: 0;
+  right: 50%;
+}
+.g-line::after {
+  left: 50%;
+  right: 0;
+}
+.translate::before, .translate::after {
+  -webkit-transform: translateZ(88px);
+          transform: translateZ(88px);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.g-colon {
+  display: inline-block;
+  width: 4vw;
+  height: 12vw;
+}
+.g-colon .g-colon-top, .g-colon .g-colon-bottom {
+  position: absolute;
+  width: .8vw;
+  height: .8vw;
+  background-color: #181919;
+}
+.g-colon .g-colon-top:before, .g-colon .g-colon-bottom:before {
+  content: '';
+  width: .8vw;
+  height: .8vw;
+  position: absolute;
+  background-color: #34eabc;
+  box-shadow: 0 0 1vw #0bfdfd, inset 0 0 0.125vmin #0bfdfd;
+  -webkit-transform: translateZ(88px);
+          transform: translateZ(88px);
+}
+.g-colon .g-colon-top {
+  top: 2vw;
+}
+.g-colon .g-colon-bottom {
+  top: 4vw;
+}
+
+.g-number[data-digit='0'] .g-line:nth-child(2)::before, .g-number[data-digit='0'] .g-line:nth-child(2)::after,
+.g-number[data-digit='1'] .g-line:nth-child(1)::before,
+.g-number[data-digit='1'] .g-line:nth-child(1)::after,
+.g-number[data-digit='1'] .g-line:nth-child(2)::before,
+.g-number[data-digit='1'] .g-line:nth-child(2)::after,
+.g-number[data-digit='1'] .g-line:nth-child(3)::before,
+.g-number[data-digit='1'] .g-line:nth-child(3)::after,
+.g-number[data-digit='1'] .g-line:nth-child(4)::before,
+.g-number[data-digit='1'] .g-line:nth-child(4)::after,
+.g-number[data-digit='1'] .g-line:nth-child(6)::before,
+.g-number[data-digit='1'] .g-line:nth-child(6)::after,
+.g-number[data-digit='2'] .g-line:nth-child(4)::before,
+.g-number[data-digit='2'] .g-line:nth-child(4)::after,
+.g-number[data-digit='2'] .g-line:nth-child(7)::before,
+.g-number[data-digit='2'] .g-line:nth-child(7)::after,
+.g-number[data-digit='3'] .g-line:nth-child(4)::before,
+.g-number[data-digit='3'] .g-line:nth-child(4)::after,
+.g-number[data-digit='3'] .g-line:nth-child(6)::before,
+.g-number[data-digit='3'] .g-line:nth-child(6)::after,
+.g-number[data-digit='4'] .g-line:nth-child(1)::before,
+.g-number[data-digit='4'] .g-line:nth-child(1)::after,
+.g-number[data-digit='4'] .g-line:nth-child(3)::before,
+.g-number[data-digit='4'] .g-line:nth-child(3)::after,
+.g-number[data-digit='4'] .g-line:nth-child(6)::before,
+.g-number[data-digit='4'] .g-line:nth-child(6)::after,
+.g-number[data-digit='5'] .g-line:nth-child(5)::before,
+.g-number[data-digit='5'] .g-line:nth-child(5)::after,
+.g-number[data-digit='5'] .g-line:nth-child(6)::before,
+.g-number[data-digit='5'] .g-line:nth-child(6)::after,
+.g-number[data-digit='6'] .g-line:nth-child(5)::before,
+.g-number[data-digit='6'] .g-line:nth-child(5)::after,
+.g-number[data-digit='7'] .g-line:nth-child(2)::before,
+.g-number[data-digit='7'] .g-line:nth-child(2)::after,
+.g-number[data-digit='7'] .g-line:nth-child(3)::before,
+.g-number[data-digit='7'] .g-line:nth-child(3)::after,
+.g-number[data-digit='7'] .g-line:nth-child(4)::before,
+.g-number[data-digit='7'] .g-line:nth-child(4)::after,
+.g-number[data-digit='7'] .g-line:nth-child(6)::before,
+.g-number[data-digit='7'] .g-line:nth-child(6)::after,
+.g-number[data-digit='9'] .g-line:nth-child(6)::before,
+.g-number[data-digit='9'] .g-line:nth-child(6)::after {
+  -webkit-transform: translateZ(37px);
+          transform: translateZ(37px);
+  background: #3c4444;
+  box-shadow: 0 0 1vw #425454;
+  height:.15vw;
+}
+
+@font-face{
+    font-family:'ZoomlaShuaisong-A028';
+    src:url('https://code.z01.com/font/ZoomlaShuaisong-A028.ttf');
+    font-style: normal; 
+    font-weight: normal;
+}  
+
+.tatto {
+  font-family: 'ZoomlaShuaisong-A028';/*逐浪帅宋斜楷体*/
+  position: absolute;
+  left: 70%;
+  top: 75%;
+  width: 15vw;
+  color: #34eabc;
+  text-shadow: 0 0 1vw #0bfdfd, inset 0 0 0.125vmin #0bfdfd;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transform: translateZ(88px);
+   transform: translateZ(88px);
+}
+
+.button .button_3d , .button .button_reflect {
+  display: inline-block;
+  height: 2.5vw;
+  width : 10vw;
+  font-size : 1.5vw; 
+  vertical-align: middle;
+  color:#34eabc;
+  border-radius: 1vw;
+  border: 0.1vw solid #34eabc;
+  background :transparent;
+  box-shadow: 0 0 .5vw #0bfdfd, inset 0 0 0.125vmin #0bfdfd;
+  transform: translateZ(88px);
+  cursor: pointer;
+  margin-left: 3vw;
+}
+
+    </style>
+    <style id="animation" >
+      
+        @-webkit-keyframes rotateReverse {
+          0% {
+            -webkit-transform: rotateZ(0deg);
+                    transform: rotateZ(0deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-360deg);
+                    transform: rotateZ(-360deg);
+          }
+        }
+
+        @keyframes rotateReverse {
+          0% {
+            -webkit-transform: rotateZ(0deg);
+                    transform: rotateZ(0deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-360deg);
+                    transform: rotateZ(-360deg);
+          }
+        }
+        @-webkit-keyframes rotate {
+          0% {
+            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          }
+          50% {
+            -webkit-transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
+                    transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
+          }
+          100% {
+            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+                    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+          }
+        }
+        @keyframes rotate {
+          0% {
+            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          }
+          50% {
+            -webkit-transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
+                    transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
+          }
+          100% {
+            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+                    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+          }
+        } 
+
+    </style>
+</head>
+<body>
+    
+<div class="g-number-container preserve">
+    <div class="g-number-rotate preserve">
+      <div class="g-number preserve" data-digit="2">
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+      </div>
+      <div class="g-number preserve" data-digit="1">
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+      </div>
+      <div class="g-colon preserve">
+        <div class="g-colon-top preserve"></div>
+        <div class="g-colon-bottom preserve"></div>
+      </div>
+      <div class="g-number preserve" data-digit="1">
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+      </div>
+      <div class="g-number preserve" data-digit="5">
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+      </div>
+      <div class="g-colon preserve">
+        <div class="g-colon-top preserve"></div>
+        <div class="g-colon-bottom preserve"></div>
+      </div>
+      <div class="g-number preserve" data-digit="2">
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+        <div class="g-line preserve translate"> </div>
+      </div>
+      <div class="g-number preserve" data-digit="4">
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+        <div class="g-line preserve translate"></div>
+      </div>
+      <div class="tatto">葛佩文 ❤ 习一凡</div>
+      <div class="button">
+          <div class="button_3d" onclick="addAnimation('3d')"> 3d旋转 </div>
+          <div class="button_reflect" onclick="addAnimation('reflect')"> 平面倒影 </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
