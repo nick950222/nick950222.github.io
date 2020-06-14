@@ -34,74 +34,10 @@ var numbers  = document.getElementsByClassName('g-number')
 
     function addAnimation(type){
       if(document.documentElement.dataset.animation === type) return;
-      var newStyle = null
-      var animationStyle = document.getElementById('animation')
-      var oldStyle = animationStyle.childNodes[0]
-      if(type === '3d'){
-        newStyle = document.createTextNode(`@-webkit-keyframes rotateReverse {
-          0% {
-            -webkit-transform: rotateZ(0deg);
-                    transform: rotateZ(0deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-360deg);
-                    transform: rotateZ(-360deg);
-          }
-        }
-
-        @keyframes rotateReverse {
-          0% {
-            -webkit-transform: rotateZ(0deg);
-                    transform: rotateZ(0deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-360deg);
-                    transform: rotateZ(-360deg);
-          }
-        }
-        @-webkit-keyframes rotate {
-          0% {
-            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-          }
-          50% {
-            -webkit-transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
-                    transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
-          }
-          100% {
-            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
-                    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
-          }
-        }
-        @keyframes rotate {
-          0% {
-            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-          }
-          50% {
-            -webkit-transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
-                    transform: rotateX(40deg) rotateY(40deg) rotateZ(180deg);
-          }
-          100% {
-            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
-                    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
-          }
-        } `)
-        
-      } else {
-        newStyle = document.createTextNode(`
-        
-          .g-number-container {
-              margin-top:10%;
-              -webkit-animation: none;
-              animation: none;
-          }
-          .g-number-rotate {
-            -webkit-animation: none;
-            animation: none;
-            -webkit-box-reflect: below -1.5vw linear-gradient(to top, rgba(255,255,255,0.5), rgba(255,255,255,0));
-        `)
-      }
+      var container = document.getElementsByClassName('g-number-container')[0]
+      var rotator = document.getElementsByClassName('g-number-rotate')[0]
+      container.classList.add('reflect')
+      rotator.classList.add('reflect')
       document.documentElement.setAttribute('data-animation',type)
       animationStyle.replaceChild(newStyle,oldStyle)
     }
