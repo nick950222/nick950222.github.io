@@ -90,6 +90,14 @@ var numbers  = document.getElementsByClassName('g-number')
         
       } else {
         newStyle = document.createTextNode(`
+            @-webkit-keyframes rotateReverse {
+            }
+            @keyframes rotateReverse {
+            }
+            @-webkit-keyframes rotate {
+            }
+            @keyframes rotate {
+            }
             .g-number-container {
                 margin-top:10%;
             }
