@@ -36,7 +36,12 @@ var numbers  = document.getElementsByClassName('g-number')
       if(document.documentElement.dataset.animation === type) return;
       var container = document.getElementsByClassName('g-number-container')[0]
       var rotator = document.getElementsByClassName('g-number-rotate')[0]
-      container.classList.add('reflect')
-      rotator.classList.add('reflect')
+      if(type==='reflect'){
+        container.classList.add('reflect')
+        rotator.classList.add('reflect')
+      } else {
+        container.classList.remove('reflect')
+        rotator.classList.remove('reflect')
+      }
       document.documentElement.setAttribute('data-animation',type)
     }
