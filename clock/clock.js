@@ -94,19 +94,15 @@ var numbers  = document.getElementsByClassName('g-number')
           .g-number-container {
                 margin-top:10%;
           }
-          .g-number-rotate {
-            -webkit-box-reflect: below -1.5vw linear-gradient(to top, rgba(255,255,255,0.5), rgba(255,255,255,0));
+        } 
+          .g-number-container {
+            -webkit-animation: none;
+            animation: none;
           } 
-          g-number-container {
-            -webkit-animation: none;
-            animation: none;
-          }
-          
           .g-number-rotate {
             -webkit-animation: none;
             animation: none;
-          }     
-          .
+            -webkit-box-reflect: below -1.5vw linear-gradient(to top, rgba(255,255,255,0.5), rgba(255,255,255,0));
         `)
       }
       document.documentElement.setAttribute('data-animation',type)
