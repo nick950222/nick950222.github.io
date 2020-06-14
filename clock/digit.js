@@ -92,13 +92,10 @@ var numbers  = document.getElementsByClassName('g-number')
         newStyle = document.createTextNode(`
         
           .g-number-container {
-                margin-top:10%;
+              margin-top:10%;
+              -webkit-animation: none;
+              animation: none;
           }
-        } 
-          .g-number-container {
-            -webkit-animation: none;
-            animation: none;
-          } 
           .g-number-rotate {
             -webkit-animation: none;
             animation: none;
