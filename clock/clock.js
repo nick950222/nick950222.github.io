@@ -36,7 +36,7 @@ var numbers  = document.getElementsByClassName('g-number')
       if(document.documentElement.dataset.animation === type) return;
       var newStyle = null
       var animationStyle = document.getElementById('animation')
-      var oldStyle = animationStyle.childNodes[0]
+      var style = document.createElement('style')
       if(type === '3d'){
         newStyle = document.createTextNode(`@-webkit-keyframes rotateReverse {
           0% {
@@ -139,6 +139,9 @@ var numbers  = document.getElementsByClassName('g-number')
         `)
       }
       document.documentElement.setAttribute('data-animation',type)
-      animationStyle.removeChild(oldStyle);
-      animationStyle.appendChild(newStyle);
+      style.appendChild(newStyle)
+      document.getElementsByTagName('head')[0].removeChild(animationStyle)
+      window.requestAnimationFrame(()=>{
+        document.getElementsByTagName('head')[0].appendChild(animationStyle)
+      })
     }
