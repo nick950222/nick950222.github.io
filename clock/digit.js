@@ -39,5 +39,4 @@ var numbers  = document.getElementsByClassName('g-number')
       container.classList.add('reflect')
       rotator.classList.add('reflect')
       document.documentElement.setAttribute('data-animation',type)
-      animationStyle.replaceChild(newStyle,oldStyle)
     }
